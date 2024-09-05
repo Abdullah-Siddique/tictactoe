@@ -2,15 +2,28 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start; 
     height: 100vh;
     margin: 0;
     font-family: Arial, sans-serif;
     background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fad0c4, #fbc2eb, #fbc2eb, #a18cd1, #fad0c4);
     background-size: 300% 300%;
     animation: gradientShift 10s ease infinite;
-    padding: 20px; /* Added padding for small screen spacing */
-    box-sizing: border-box; /* Ensure padding is included in width calculations */
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 50px; 
+}
+
+@media (max-width: 768px) {
+    body {
+        margin-top: 40px; 
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        margin-top: 30px;
+    }
 }
 
 @keyframes gradientShift {
