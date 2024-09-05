@@ -9,6 +9,8 @@ body {
     background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fad0c4, #fbc2eb, #fbc2eb, #a18cd1, #fad0c4);
     background-size: 300% 300%;
     animation: gradientShift 10s ease infinite;
+    padding: 20px; /* Added padding for small screen spacing */
+    box-sizing: border-box; /* Ensure padding is included in width calculations */
 }
 
 @keyframes gradientShift {
@@ -24,7 +26,7 @@ body {
 }
 
 .spacing {
-    height: 80px; 
+    height: 80px;
 }
 
 .board {
@@ -32,7 +34,7 @@ body {
     grid-template-columns: repeat(3, 160px);
     grid-template-rows: repeat(3, 160px);
     gap: 15px;
-    margin-top: 40px; /* Adjust as needed */
+    margin-top: 40px;
 }
 
 .cell {
@@ -130,23 +132,23 @@ footer a:hover {
     cursor: pointer;
 }
 
-/* Mobile Design */
+/* Tablet Design */
 @media (max-width: 768px) {
     .board {
-        grid-template-columns: repeat(3, 100px);
-        grid-template-rows: repeat(3, 100px);
+        grid-template-columns: repeat(3, 120px);
+        grid-template-rows: repeat(3, 120px);
         gap: 10px;
     }
 
     .cell {
-        width: 100px;
-        height: 100px;
-        font-size: 3em;
+        width: 120px;
+        height: 120px;
+        font-size: 3.5em;
     }
 
     #status {
         font-size: 1.5em;
-        margin-top: 40px;
+        margin-top: 30px;
     }
 
     .colorful-button {
@@ -159,23 +161,28 @@ footer a:hover {
     }
 }
 
-
+/* Mobile Design */
 @media (max-width: 480px) {
+    body {
+        height: auto;
+        padding: 20px;
+    }
+
     .board {
-        grid-template-columns: repeat(3, 80px);
-        grid-template-rows: repeat(3, 80px);
+        grid-template-columns: repeat(3, 100px);
+        grid-template-rows: repeat(3, 100px);
         gap: 8px;
     }
 
     .cell {
-        width: 80px;
-        height: 80px;
-        font-size: 2.5em;
+        width: 100px;
+        height: 100px;
+        font-size: 2.8em;
     }
 
     #status {
         font-size: 1.2em;
-        margin-top: 30px;
+        margin-top: 20px;
     }
 
     .colorful-button {
@@ -184,9 +191,10 @@ footer a:hover {
     }
 
     footer {
-        font-size: 0.9em;
+        font-size: 0.8em;
     }
 }
+
 
 
 
