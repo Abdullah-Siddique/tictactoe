@@ -22,23 +22,15 @@ body {
         background-position: 0% 50%;
     }
 }
-
-h6 {
-    margin-bottom: 80px; /* Increased margin to push it further down */
-    font-size: 2.5em;
-    text-align: center;
-    background-color: yellow; /* Temporary background color for debugging */
-    position: relative;
-    z-index: 10;
-    visibility: visible; /* Ensure visibility */
+.spacing {
+    height: 80px;
 }
-
 .board {
     display: grid;
     grid-template-columns: repeat(3, 160px);
     grid-template-rows: repeat(3, 160px);
     gap: 15px;
-    margin-top: 40px; /* Adjust as needed */
+    margin-top: 40px; 
 }
 
 .cell {
@@ -95,7 +87,7 @@ footer a:hover {
 }
 
 #status {
-    margin-top: 60px; /* Increased margin-top to push it further down */
+    margin-top: 60px; 
     font-size: 2em;
     font-weight: bold;
     color: #ff4500;
@@ -130,7 +122,7 @@ footer a:hover {
 }
 
 #restart {
-    margin-top: 40px; /* Increased margin-top to push it further down */
+    margin-top: 40px; 
     padding: 15px 30px;
     font-size: 1.5em;
     cursor: pointer;
