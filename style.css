@@ -1,3 +1,10 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -9,7 +16,7 @@ body {
     background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fad0c4, #fbc2eb, #fbc2eb, #a18cd1, #fad0c4);
     background-size: 300% 300%;
     animation: gradientShift 10s ease infinite;
-    text-align: center; /* Center text */
+    text-align: center;
 }
 
 @keyframes gradientShift {
@@ -25,8 +32,8 @@ body {
 }
 
 h6 {
-    margin-bottom: 20px; /* Adjusted margin for better spacing */
-    font-size: 1.5em; /* Scaled down for better responsiveness */
+    margin-bottom: 20px;
+    font-size: 1.5em;
     text-align: center;
     background-color: yellow;
     padding: 10px;
@@ -38,9 +45,9 @@ h6 {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     gap: 10px;
-    width: 90vw; /* Responsive width */
-    max-width: 500px; /* Max width for larger screens */
-    margin-top: 20px; /* Adjusted margin for better spacing */
+    width: 90vw;
+    max-width: 400px; /* Adjusted max-width for better mobile experience */
+    margin-top: 20px;
 }
 
 .cell {
@@ -51,8 +58,13 @@ h6 {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 3em; /* Scaled down for responsiveness */
+    font-size: 2.5em; /* Slightly smaller font-size for better fit on small screens */
     cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cell:hover {
+    background-color: #f0f0f0;
 }
 
 .colorful-button {
@@ -60,8 +72,8 @@ h6 {
     background-size: 400% 400%;
     color: white;
     font-weight: bold;
-    padding: 10px 20px;
-    font-size: 1.2em; /* Adjusted font size */
+    padding: 12px 24px;
+    font-size: 1.2em;
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -81,10 +93,10 @@ footer {
     text-align: center;
     color: #666;
     background-color: #f1f1f1;
-    padding: 20px 0;
+    padding: 20px;
     margin-top: auto;
     width: 100%;
-    font-size: 1em; /* Adjusted font size */
+    font-size: 1em;
 }
 
 footer a {
@@ -97,8 +109,8 @@ footer a:hover {
 }
 
 #status {
-    margin-top: 20px; /* Adjusted margin for better spacing */
-    font-size: 1.5em; /* Scaled down for responsiveness */
+    margin-top: 20px;
+    font-size: 1.5em;
     font-weight: bold;
     color: #ff4500;
     padding: 10px;
@@ -130,10 +142,73 @@ footer a:hover {
 }
 
 #restart {
-    margin-top: 20px; /* Adjusted margin for better spacing */
-    padding: 10px 20px;
-    font-size: 1.2em; /* Adjusted font size */
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 1.2em;
     cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #ff6f61, #ff9478, #ffcf56, #98ff6c, #56fff4, #566eff);
+    color: white;
+    transition: background-position 1s ease, transform 0.2s ease;
 }
+
+#restart:hover {
+    background-position: 100% 0%;
+    transform: scale(1.1);
+}
+
+#restart:active {
+    transform: scale(1);
+}
+
+/* Media Queries for Better Responsiveness */
+@media (max-width: 600px) {
+    h6 {
+        font-size: 1.2em;
+    }
+
+    .board {
+        width: 95vw;
+        max-width: 300px;
+    }
+
+    .cell {
+        font-size: 2em;
+    }
+
+    #status {
+        font-size: 1.2em;
+        padding: 8px;
+        border: 1px solid #ff4500;
+    }
+
+    .colorful-button, #restart {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 400px) {
+    h6 {
+        font-size: 1em;
+    }
+
+    .cell {
+        font-size: 1.5em;
+    }
+
+    #status {
+        font-size: 1em;
+        padding: 6px;
+        border: 1px solid #ff4500;
+    }
+
+    .colorful-button, #restart {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+}
+
 
 
